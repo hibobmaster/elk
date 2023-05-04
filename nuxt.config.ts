@@ -97,12 +97,12 @@ export default defineNuxtConfig({
       apiToken: '',
     },
     public: {
-      privacyPolicyUrl: '',
+      privacyPolicyUrl: 'https://m.qqs.tw/privacy-policy',
       // We use LibreTranslate (https://github.com/LibreTranslate/LibreTranslate) as
       // our default translation server #76
       translateApi: '',
       // Use the instance where Elk has its Mastodon account as the default
-      defaultServer: 'm.webtoo.ls',
+      defaultServer: 'm.qqs.tw',
       singleInstance: false,
     },
     storage: {
