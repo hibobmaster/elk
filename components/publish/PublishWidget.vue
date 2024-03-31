@@ -87,7 +87,9 @@ function editPollOptionDraft(event: Event, index: number) {
 }
 
 function deletePollOption(index: number) {
-  draft.value.params.poll!.options = draft.value.params.poll!.options.slice().splice(index, 1)
+  const newPollOptions = draft.value.params.poll!.options.slice()
+  newPollOptions.splice(index, 1)
+  draft.value.params.poll!.options = newPollOptions
   trimPollOptions()
 }
 
@@ -138,7 +140,7 @@ const characterCount = computed(() => {
     length -= fullMatch.length - (before + username).length - 1 // - 1 for the @
 
   if (draft.value.mentions) {
-    // + 1 is needed as mentions always need a space seperator at the end
+    // + 1 is needed as mentions always need a space separator at the end
     length += draft.value.mentions.map((mention) => {
       const [handle] = mention.split('@')
       return `@${handle}`
