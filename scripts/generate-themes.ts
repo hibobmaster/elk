@@ -1,5 +1,5 @@
+import type { ThemeColors } from '../app/composables/settings'
 import chroma from 'chroma-js'
-import type { ThemeColors } from '~/composables/settings'
 
 // #cc7d24 -> hcl(67.14,62.19,59.56)
 export const themesColor = Array.from(
